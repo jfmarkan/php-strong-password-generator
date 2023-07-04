@@ -23,13 +23,13 @@
     $charactersLength = strlen($characters);
     
     for ($i = 0; $i < $length; $i++) {
-        if ($charRepetition == 'true') {
+        if ($charRepetition === 'true') {
             $password .= $characters[rand(0, $charactersLength - 1)];
         } else {
             $caracter = $characters[rand(0, $charactersLength - 1)];
             
-            while (strpos($password, $caracter) !== false) {
-                $caracter = $characters[rand(0, $charactersLength - 1)];
+            while (strpos($password, $character) !== false) {
+                $character = $characters[rand(0, $charactersLength - 1)];
             }
             
             $password .= $character;
@@ -39,5 +39,6 @@
     }
 
     $generatedPassword = createPassword($length, $charRepetition, $letters, $numbers, $symbols);
+
     echo "Generated Password: " . $generatedPassword;
 ?>

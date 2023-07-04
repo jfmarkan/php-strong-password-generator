@@ -33,7 +33,7 @@
         </div>
         <div class="row text-align-center">
             <div class="col-12">
-                <form action="./generatePassword.php" method="GET">
+                <form action="./functions.php" method="GET">
                     <div class="row m-3">
                         <div class="col-2">
                             <label for="inputPassword6" class="col-form-label">Pasword Length</label>
