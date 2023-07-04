@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
     $length = $_GET['length'];
     $charRepetition = isset($_GET['charRepetition']);
     $letters = isset($_GET['letters']);
@@ -40,5 +42,7 @@
 
     $generatedPassword = createPassword($length, $charRepetition, $letters, $numbers, $symbols);
 
-    echo "Generated Password: " . $generatedPassword;
+    $_SESSION['generatedPassword'] = $generatedPassword;
+    header("Location: showPassword.php");
+    exit();
 ?>

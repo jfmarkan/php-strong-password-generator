@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,17 +15,17 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h1>Password Generator</h1>
+                <h1 class="text-center">Password Generator</h1>
             </div>
         </div>
         <div class="row">
             <div class="col-12">
-                <h4>
+                <h4 class="text-center">
                     Create a powerfull and secure password
                 </h4>
             </div>
         </div>
-        <div class="row">
+        <div class="row my-4">
             <div class="col-12">
                 <div class="alert alert-info d-flex align-items-center" role="alert">
                     <i class="fa-solid fa-circle-info me-2"></i>
@@ -31,22 +35,22 @@
                 </div>
             </div>
         </div>
-        <div class="row text-align-center">
+        <div class="row">
             <div class="col-12">
-                <form action="./functions.php" method="GET">
-                    <div class="row m-3">
-                        <div class="col-2">
+                <form action="./generatePassword.php" method="GET">
+                    <div class="row mb-3">
+                        <div class="col-auto">
                             <label for="inputPassword6" class="col-form-label">Pasword Length</label>
                         </div>
-                        <div class="col-2">
+                        <div class="col-auto">
                             <input type="number" name="length" id="passLength" class="form-control">
                         </div>
                     </div>
-                    <div class="row m-3">
-                        <div class="col-2">
-                                <label for="form-check" class="col-form-label">Character repetition.</label>
+                    <div class="row mb-3">
+                        <div class="col-auto">
+                                <label for="form-check" class="col-form-label">Character repetition</label>
                         </div>
-                        <div class="col-2">
+                        <div class="col-auto">
                             <div class="form-check">
                                 <input class="form-check-input" type="radio" name="charRepetition" value="true" checked>
                                 <label class="form-check-label" for="flexRadioDefault1">
@@ -61,11 +65,11 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row m-3">
-                        <div class="col-2">
-                            <label for="form-check" class="col-form-label">Character types.</label>
+                    <div class="row mb-3">
+                        <div class="col-auto">
+                            <label for="form-check" class="col-form-label">Character types</label>
                         </div>
-                        <div class="col-2">
+                        <div class="col-auto">
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" value="true" name="letters">
                                 <label class="form-check-label" for="checkLetters">
@@ -86,11 +90,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row m-3">
-                        <div class="col-3">
+                    <div class="row">
+                        <div class="col-auto">
                             <input type="submit" value="GENERATE" class="btn btn-primary">
-                        </div>
-                        <div class="col-3">
                             <input type="reset" value="CANCEL" class="btn btn-secondary">
                         </div>
                     </div>
