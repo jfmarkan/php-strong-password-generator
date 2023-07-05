@@ -31,6 +31,9 @@ session_start();
                 <h4 class="alert-heading display-4">Success!</h4>
                     <p class="display-3 text-center"><?php echo $generatedPassword; ?></p>
                     <hr>
+                    <div class="text-center my-3">
+                        <img src="http://api.qrserver.com/v1/create-qr-code/?data=<?php echo $generatedPassword;?>!&size=100x100&color=0f5132&bgcolor=d1e7dd" alt="Password QR code" >
+                    </div>
                     <p class="mb-0 text-center">We have created the password with the parameters you have selected.</p>
             </div>
             <?php  unset($_SESSION['generatedPassword']);
